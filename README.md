@@ -87,4 +87,4 @@ El diseño se centra en la elegancia y la calidez, utilizando una paleta de colo
 ---
 
 **Desarrollado por:** Daniel Celiz Martinez
-**Estudiante ID:** 23030536 | CESUN Universidad
+**Estudiante ID:** 23030536 | CESUN Universidad 
