@@ -1,61 +1,92 @@
+import React from 'react';
+
 function Services() {
+  // Lista de servicios con iconos (puedes cambiar los iconos SVG si gustas)
   const services = [
     {
-      id: 1,
-      title: "Envío Rápido",
-      desc: "Entrega el mismo día en Tijuana.",
+      title: "Para alguien especial",
       icon: (
-        <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       ),
+      desc: "Detalles que enamoran"
     },
     {
-      id: 2,
-      title: "Flores Frescas",
-      desc: "Directo del campo a tu casa.",
+      title: "En momentos difíciles",
       icon: (
-        <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
+      desc: "Respeto y condolencias"
     },
     {
-      id: 3,
-      title: "Pagos Seguros",
-      desc: "Tus datos están protegidos.",
+      title: "Crea tu arreglo",
       icon: (
-        <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
         </svg>
       ),
+      desc: "Tu estilo, tus flores"
     },
     {
-      id: 4,
-      title: "Soporte 24/7",
-      desc: "Estamos aquí para ayudarte.",
+      title: "Nosotros lo hacemos por ti",
       icon: (
-        <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
         </svg>
       ),
+      desc: "Diseño experto"
     },
+    {
+      title: "Eventos especiales",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      ),
+      desc: "Bodas y celebraciones"
+    }
   ];
 
   return (
-    <section className="py-12 bg-white border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
-            <div key={service.id} className="flex flex-col items-center text-center group hover:transform hover:-translate-y-1 transition duration-300">
-              <div className="mb-4 p-4 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors">
-                {service.icon}
+    <section className="py-20 bg-white border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Título de Sección */}
+        <div className="text-center mb-16">
+          <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">
+            Nuestros Servicios
+          </span>
+          <h2 className="text-3xl font-serif text-gray-900 mt-3">
+            Ocasiones Inolvidables
+          </h2>
+        </div>
+
+        {/* Grid de Servicios */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+          {services.map((item, index) => (
+            <div 
+              key={index} 
+              className="group p-6 rounded-xl hover:bg-gray-50 transition-all duration-500 cursor-pointer flex flex-col items-center"
+            >
+              {/* Círculo del Icono */}
+              <div className="w-16 h-16 rounded-full bg-gray-50 group-hover:bg-white border border-gray-100 group-hover:border-black flex items-center justify-center mb-6 transition-all duration-500 text-gray-600 group-hover:text-black">
+                {item.icon}
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-500 text-sm">{service.desc}</p>
+              
+              {/* Texto */}
+              <h3 className="font-serif text-lg text-gray-900 mb-2 leading-tight group-hover:translate-y-[-2px] transition-transform">
+                {item.title}
+              </h3>
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-light">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

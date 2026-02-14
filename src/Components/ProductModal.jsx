@@ -45,9 +45,9 @@ function ProductModal({ product, onClose, addToCart }) {
             <div className="prose text-gray-600 mb-8 leading-relaxed">
                 <p>{product.description}</p>
                 <ul className="mt-4 space-y-2 text-sm">
-                   <li>☀️ <strong>Luz:</strong> Indirecta brillante.</li>
-                   <li>💧 <strong>Agua:</strong> Regar cada 3 días.</li>
-                   <li>🌱 <strong>Cuidado:</strong> {product.care || "Fácil de mantener."}</li>
+                   <li> <strong>Luz:</strong> Indirecta brillante.</li>
+                   <li> <strong>Agua:</strong> Regar cada 3 días.</li>
+                   <li> <strong>Cuidado:</strong> {product.care || "Fácil de mantener."}</li>
                 </ul>
             </div>
 

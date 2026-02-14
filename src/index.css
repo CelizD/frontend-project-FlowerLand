@@ -26,3 +26,21 @@ html {
 .delay-200 {
   animation-delay: 0.2s;
 }
+
+/* REGLAS GLOBALES DE LUJO */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+body, p, button, input {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Scrollbar invisible para look minimalista */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}

@@ -2,39 +2,54 @@ import { useState } from 'react';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username.trim()) {
+    // AQUÍ PUEDES PONER TU CONTRASEÑA SECRETA
+    if (username === "daniel" && password === "1234") {
       onLogin(username);
+    } else {
+      setError("Usuario o contraseña incorrectos");
     }
   };
 
   return (
-    <div className="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2 lowercase tracking-tighter">flowerland</h1>
-        <p className="text-gray-500 mb-8 lowercase text-sm">ingresa para continuar</p>
+    <div className="flex flex-col items-center justify-center min-h-[60vh] bg-gray-100 p-4">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Acceso Admin</h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
-            <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">usuario</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Usuario</label>
             <input 
               type="text" 
-              className="w-full border-b-2 border-gray-200 py-3 text-xl text-gray-900 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300"
-              placeholder="ej. daniel"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              autoFocus
+              className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Ej: daniel"
             />
           </div>
           
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+            <input 
+              type="password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Ej: 1234"
+            />
+          </div>
+
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
           <button 
             type="submit" 
-            className="mt-6 bg-black text-white py-4 rounded-xl font-bold lowercase hover:bg-gray-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={!username.trim()}
+            className="bg-gray-900 text-white py-2 rounded-lg font-bold hover:bg-black transition mt-2"
           >
-            entrar
+            Entrar
           </button>
         </form>
       </div>
