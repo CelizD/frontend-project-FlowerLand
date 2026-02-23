@@ -261,7 +261,7 @@ const PRODUCTOS_BACKUP = [
 ];
 
 // --- 1. CONEXIÓN A MONGODB ATLAS ---
-const URI = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/flowerland?retryWrites=true&w=majority";
+const URI = "mongodb+srv://mxdcm82_db_user:U6fsGrLS3eutKs@cluster0.t1uw2qx.mongodb.net/?appName=Cluster0&retryWrites=true&w=majority";
 
 const connectDB = async () => {
   try {
